@@ -1,0 +1,6 @@
+#!/bin/sh
+ln -sf ~/.cache/wal/colors.Xresources ~/.Xresources
+cat ~/.Xresources ~/.cache/wal/xrdb_extra | xrdb -merge
+cd ~/st && make >/dev/null 2>&1
+fcitx5-remote -r >/dev/null 2>&1
+xdotool key super+ctrl+backslash
